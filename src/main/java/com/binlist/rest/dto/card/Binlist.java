@@ -1,23 +1,12 @@
-package com.binlist.rest.dto;
+package com.binlist.rest.dto.card;
 
-import com.binlist.rest.dto.card.Bank;
-import com.binlist.rest.dto.card.Country;
-import com.binlist.rest.dto.card.NumberCard;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class BinlistOut {
+public class Binlist {
 
 	
 	private NumberCard number;
-	@JsonIgnore
 	private String scheme;
-	@JsonIgnore
 	private String type;
-	@JsonIgnore
 	private String brand;
-	@JsonIgnore
 	private boolean prepaid;
 	private Country country;
 	private Bank bank;

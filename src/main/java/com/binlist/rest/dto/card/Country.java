@@ -1,24 +1,13 @@
 package com.binlist.rest.dto.card;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Country {
 
-	@JsonIgnore
 	private int numeric;
-	@JsonIgnore
 	private String alpha2;
-	@JsonIgnore
 	private String name;
-	@JsonIgnore
 	private String emoji;
-	@JsonIgnore
 	private String currency;
-	@JsonIgnore
 	private int latitude;
-	@JsonIgnore
 	private int longitude;
 
 	public int getNumeric() {

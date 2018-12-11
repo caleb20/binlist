@@ -1,12 +1,10 @@
 package com.binlist.rest.dto;
 
-import java.util.Date;
-
 public class TokenOut {
 
 	private String token;
 	private String brand;
-	private Date creation_dt;
+	private String creation_dt;
 
 	public String getToken() {
 		return token;
@@ -24,12 +22,12 @@ public class TokenOut {
 		this.brand = brand;
 	}
 
-	public Date getCreation_dt() {
+	public String getCreation_dt() {
 		return creation_dt;
 	}
 
-	public void setCreation_dt(Date creation_dt) {
-		this.creation_dt = creation_dt;
+	public void setCreation_dt(String formatDateTime) {
+		this.creation_dt = formatDateTime;
 	}
 
 	@Override

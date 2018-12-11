@@ -1,14 +1,8 @@
 package com.binlist.rest.dto.card;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class NumberCard {
 	
-	@JsonIgnore
 	private int length;
-	@JsonIgnore
 	private boolean luhn;
 
 	public int getLength() {

@@ -1,18 +1,10 @@
 package com.binlist.rest.dto.card;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Bank {
 
-	@JsonIgnore
 	private String name;
-	@JsonIgnore
 	private String url;
-	@JsonIgnore
 	private String phone;
-	@JsonIgnore
 	private String city;
 
 	public String getName() {
