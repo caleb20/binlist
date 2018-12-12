@@ -1,6 +1,7 @@
 package com.binlist.rest.service.impl;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -14,12 +15,15 @@ import com.binlist.rest.util.Utils;
 @Service
 public class TokenServiceImpl implements TokenService {
 
+	@Value("${url.binlist}")
+	private String link;
+	
 	@Override
 	public Binlist getBinlist(String bin) {
 
 		RestTemplate response = new RestTemplate();
 
-		return response.getForObject(Constant.URL_BINLIST.concat(bin), Binlist.class);
+		return response.getForObject(link.concat(bin), Binlist.class);
 	}
 
 	@Override
