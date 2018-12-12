@@ -1,4 +1,4 @@
-package com.binlist.rest.service;
+package com.binlist.rest.repository.integrationtest;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -11,14 +11,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.binlist.rest.dto.TokenIn;
 import com.binlist.rest.dto.TokenOut;
+import com.binlist.rest.repository.TokenRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class TokenServiceTest {
+public class TokenRepositoryTest {
 
 	@Autowired
-	TokenService tokenService;
-
+	TokenRepository tokenRepository;
+	
 	private TokenIn tokenIn = new TokenIn();
 	private String scheme;
 
@@ -33,7 +34,7 @@ public class TokenServiceTest {
 
 	@Test
 	public void TokenServiceIntegrationtest() {
-		TokenOut tokenOut = tokenService.getToken(tokenIn, scheme);
+		TokenOut tokenOut = tokenRepository.getToken(tokenIn, scheme);
 		assertNotNull(tokenOut);
 	}
 }

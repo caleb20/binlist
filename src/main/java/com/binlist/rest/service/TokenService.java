@@ -7,7 +7,6 @@ import com.binlist.rest.dto.card.Binlist;
 public interface TokenService {
 
 	public Binlist getBinlist(String bin);
-
 	public TokenOut getToken(TokenIn tokenIn, String scheme);
 
 }
