@@ -2,7 +2,6 @@ package com.binlist.rest.dto.card;
 
 public class Binlist {
 
-	
 	private NumberCard number;
 	private String scheme;
 	private String type;

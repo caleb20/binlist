@@ -10,9 +10,12 @@ public class Utils {
 		LocalDateTime now = LocalDateTime.now();
 
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
-		String formatDateTime = now.format(formatter);
 
-		return formatDateTime;
+		return now.format(formatter);
+	}
+	
+	private Utils() {
+		throw new IllegalStateException("Utils class");
 	}
 
 }
